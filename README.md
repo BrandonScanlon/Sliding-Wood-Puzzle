@@ -1,18 +1,18 @@
-## Sliding Wooden Puzzle App
-
-# MoveType
+# Sliding Wooden Puzzle App
+------
+## MoveType
 
 deltaR  : int //Row <br />
 deltaC  : int //Col <br />
 
-
-# Coordinate
+------
+## Coordinate
 
 row : int <br />
 col : int <br />
 
-
-# Puzzle
+------
+## Puzzle
 
 pieces      : Piece [*] <br />
 numRows     : int <br />
@@ -21,8 +21,8 @@ selected    : Piece[0...1] <br />
 destination : Coordinate <br />
 finalMove   : MoveType <br />
 
-
-# Piece
+------
+## Piece
 
 width       : int <br />
 height      : int <br />
@@ -30,8 +30,8 @@ row         : int <br />
 column      : int <br />
 isWinner    : boolean <br />
 
-
-# Model
+------
+## Model
 
 puzzle      : Puzzle <br />
 numMoves    : int <br />
