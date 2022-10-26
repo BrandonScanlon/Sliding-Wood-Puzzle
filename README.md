@@ -2,37 +2,37 @@
 
 # MoveType
 --------
-deltaR  : int //Row
-deltaC  : int //Col
+deltaR  : int //Row <br />
+deltaC  : int //Col <br />
 
 
 # Coordinate
 ----------
-row : int
-col : int
+row : int <br />
+col : int <br />
 
 
 # Puzzle
 ------
-pieces      : Piece [*]
-numRows     : int
-numCols     : int
-selected    : Piece[0...1]
-destination : Coordinate
-finalMove   : MoveType
+pieces      : Piece [*] <br />
+numRows     : int <br />
+numCols     : int <br />
+selected    : Piece[0...1] <br />
+destination : Coordinate <br />
+finalMove   : MoveType <br />
 
 
 # Piece
 ------
-width       : int
-height      : int
-row         : int
-column      : int
-isWinner    : boolean
+width       : int <br />
+height      : int <br />
+row         : int <br />
+column      : int <br />
+isWinner    : boolean <br />
 
 
 # Model
 ------
-puzzle      : Puzzle
-numMoves    : int
-victory     : boolean
+puzzle      : Puzzle <br />
+numMoves    : int <br />
+victory     : boolean <br />
