@@ -1,5 +1,4 @@
 # Sliding Wooden Puzzle App
-------
 ## MoveType
 
 deltaR  : int //Row <br />
