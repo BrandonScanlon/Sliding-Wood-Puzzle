@@ -4,6 +4,7 @@ import { layout } from './Layout';
 import Model from './model/Model';
 import {puzzleConfig } from './model/Puzzle.js';
 import {redrawCanvas } from './boundary/Boundary.js';
+import { selectPiece } from './controller/Controller';
 
 
 var actualPuzzle = JSON.parse(JSON.stringify(puzzleConfig));
@@ -20,6 +21,11 @@ function App() {
     redrawCanvas(model, canvasRef.current, appRef.current)
   }, [model]) // this second argument is CRITICAL, since it declared when to refresh
 
+  const handleClick = (e) => {
+    let newModel = selectPiece(model, canvasRef.current, e);
+    setModel(newModel);
+  }
+
   return (
     <main style={layout.Appmain} ref={appRef}>
       <canvas tabIndex="1"
@@ -27,6 +33,7 @@ function App() {
       ref={canvasRef}
       width={layout.canvas.width}
       height={layout.canvas.height}
+      onClick={handleClick}
       />
       <label style={layout.text}>{ "Number of Moves: " + model.numMoves } </label>
       <div style={layout.buttons}>

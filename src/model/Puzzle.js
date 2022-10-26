@@ -126,7 +126,7 @@ const puzzleConfig = {
     "piece" : "G",
     "location" : {
         "row"   : "2",
-        "col"   : "2"
+        "col"   : "3"
     }
 },
 {
