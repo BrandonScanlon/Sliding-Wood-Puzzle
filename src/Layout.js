@@ -1,50 +1,60 @@
 export const layout = {
     canvas : {
-        height  : "500",
-        width   : "500",
-    },
-
+          height: "500",
+          width: "500",
+      },
+    
     Appmain : {
-        backgroundColor: "#320453",
-        height:          "100vh",
-        width:           "100vw",
+      backgroundColor: "#320453",
+      height: "100vh",
+      width: "100vw",
     },
 
-    text: {
+    text: { 
         position: "absolute",
-        left: 500,
-        top: 100,
-        color: "yellow",
+        left:500,
+        top:50,
+        color:"yellow",
         backgroundColor: "#320453",
-        width: 150,
-    },
+        width:150,
+      },
 
-    buttons: {
+    victory: { 
+        position: "absolute",
+        left:500,
+        top:10,
+        color:"yellow",
+        backgroundColor: "#320453",
+        width:150,
+      },
+
+    buttons: { 
         position: "absolute",
         left: 550,
-        top: 90
-    },
-    
-    upButton: {
+        top:90
+      },
+
+      upbutton:  {
         position: "absolute",
         left: 50,
-        top: 80
-    },
-
-    downButton: {
+        top: 80,
+      },
+      
+      downbutton : {
         position: "absolute",
         left: 50,
-        top: 120
-    },
-
-    leftButton: {
+        top: 120,
+      },
+      
+      leftbutton : {
         position: "absolute",
-        top: 100
-    },
-
-    rightButton: {
+        top: 100,
+      },
+      
+      rightbutton : {
         position: "absolute",
+        top: 100,
         left: 100,
-        top: 100
-    },
+      },
+
 }
