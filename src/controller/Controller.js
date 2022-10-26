@@ -11,7 +11,7 @@ export function selectPiece(model, canvas, event) {
 
  let selected = null;
  if(index >= 0) {
-    selected = model.puzzle.pieces(index);
+    selected = model.puzzle.pieces[index];
  } else {
     return model;
  }
@@ -20,4 +20,13 @@ export function selectPiece(model, canvas, event) {
  model.puzzle.select(selected);
  return model.copy();
 
+}
+
+export function movePiece(model, direction) {
+    let selected = model.puzzle.selected;
+    if(!selected) { return selected; }
+
+    selected.move(direction);
+    model.updateMoveCount(+1);
+    return model.copy;
 }

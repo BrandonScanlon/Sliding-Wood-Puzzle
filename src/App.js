@@ -4,7 +4,7 @@ import { layout } from './Layout';
 import Model from './model/Model';
 import {puzzleConfig } from './model/Puzzle.js';
 import {redrawCanvas } from './boundary/Boundary.js';
-import { selectPiece } from './controller/Controller';
+import { selectPiece, movePiece } from './controller/Controller';
 
 
 var actualPuzzle = JSON.parse(JSON.stringify(puzzleConfig));
@@ -26,6 +26,11 @@ function App() {
     setModel(newModel);
   }
 
+  const movePieceHandler = (direction) => {
+    let newModel = movePiece(model, direction);
+    setModel(newModel); //react to changes, 
+  }
+
   return (
     <main style={layout.Appmain} ref={appRef}>
       <canvas tabIndex="1"
@@ -37,10 +42,10 @@ function App() {
       />
       <label style={layout.text}>{ "Number of Moves: " + model.numMoves } </label>
       <div style={layout.buttons}>
-      <button style={layout.upButton}>^</button>
-      <button style={layout.leftButton}>&lt;</button>
-      <button style={layout.rightButton}>&gt;</button>
-      <button style={layout.downButton}>V</button>
+      <button style={layout.upButton}     onClick={(e) => movePieceHandler(Up)}     disabled={!model.available(Up)}>    ^</button>
+      <button style={layout.leftButton}   onClick={(e) => movePieceHandler(Left)}   disabled={!model.available(Left)}>  &lt;</button>
+      <button style={layout.rightButton}  onClick={(e) => movePieceHandler(Right)}  disabled={!model.available(Right)}> &gt;</button>
+      <button style={layout.downButton}   onClick={(e) => movePieceHandler(Down)}     disabled={!model.available(Down)}>    V</button>
       </div>
     </main>
   );
